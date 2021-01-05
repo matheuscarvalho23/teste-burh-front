@@ -1,10 +1,12 @@
 <script>
 import Header from './Header';
+import Register from './Register';
 
 export default {
   name: 'Layout',
   components: {
     Header,
+    Register,
   }
 }
 </script>
@@ -12,6 +14,7 @@ export default {
 <template>
   <div class="container">
     <Header />
+    <Register />
   </div>
 </template>
 

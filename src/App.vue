@@ -48,6 +48,7 @@ export default {
     --text: #141414;
     --white: #fff;
     --gray: #9c9c9c;
+    --gray-light: #dddddd;
     --green: #266d4d;
   }
 </style>
