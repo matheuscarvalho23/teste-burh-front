@@ -1,18 +1,22 @@
 <script>
+import Header from './Header';
 
 export default {
   name: 'Layout',
+  components: {
+    Header,
+  }
 }
 </script>
 
 <template>
   <div class="container">
-    Hello World
+    <Header />
   </div>
 </template>
 
 <style scoped>
   .container {
-    font-size: 20px;
+    
   }
 </style>
