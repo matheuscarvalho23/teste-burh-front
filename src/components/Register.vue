@@ -1,4 +1,6 @@
 <script>
+import api from "../services/api";
+import "vuejs-noty/dist/vuejs-noty.css";
 
 export default {
   name: 'Register',
@@ -11,7 +13,33 @@ export default {
         gender: null,
 
         genders: ["Macho", "Fêmea"]
-      }
+      },
+
+      loading: false,
+    }
+  },
+  methods: {
+    handleRegister() {
+      this.loading = true;
+      api
+        .post('register', {
+          name: this.pet.name,
+          age: this.pet.age,
+          adoptionDate: this.pet.adoptionDate,
+          gender: this.pet.gender,
+        })
+        .then(response => {
+          if (response.status === 200) {
+            this.$noty.success('Pet registrado com sucesso !', {
+              layout: 'topLeft',
+            });
+          } else {
+            this.$noty.error('Ocorreu um erro ao realizar o cadastro!', {
+              layout: 'topLeft',
+            })
+          }
+          this.loading = false;
+        });
     }
   },
 }
@@ -24,7 +52,7 @@ export default {
     </div>
 
     <div class="container-form">
-      <form>
+      <form @submit.prevent="handleRegister">
         <label class="form-label" for="name">Nome</label>
         <input type="text" class="form-input" id="name" placeholder="Insira o nome do seu Pet" v-model="pet.name">
 
@@ -39,7 +67,10 @@ export default {
           <option v-for="(opt, index) in pet.genders" :value="index" :key="index">{{opt}}</option>
         </select>
 
-        <button type="submit" class="form-button">Cadastrar</button>
+        <button type="submit" class="form-button">
+          Cadastrar
+          <p v-if="loading">...</p>
+        </button>
       </form>
     </div>
 
@@ -51,8 +82,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    margin-top: 50px;
-    max-width: 960px;
+    margin-top: 30px;
+    max-width: 560px;
     height: auto;
     padding: 30px;
 
@@ -109,5 +140,9 @@ export default {
     color: var(--white);
     border: 0;
     border-radius: .25rem;
+  }
+
+  .form-button:hover {
+    opacity: 90%;
   }
 </style>
