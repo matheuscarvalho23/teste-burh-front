@@ -50,5 +50,6 @@ export default {
     --gray: #9c9c9c;
     --gray-light: #dddddd;
     --green: #266d4d;
+    --red: #ec4949;
   }
 </style>

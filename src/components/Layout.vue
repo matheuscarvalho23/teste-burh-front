@@ -17,9 +17,3 @@ export default {
     <Register />
   </div>
 </template>
-
-<style scoped>
-  .container {
-    
-  }
-</style>
