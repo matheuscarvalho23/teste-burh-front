@@ -46,6 +46,12 @@ export default {
           })
           .then(response => {
             if (response.status === 201) {
+              this.pet.name         = '';
+              this.pet.age          = '';
+              this.pet.adoptionDate = '';
+              this.pet.gender       = '';
+              this.$v.$reset();
+
               this.$noty.success('Pet registrado com sucesso !', {
                 layout: 'topRight',
               });
@@ -104,7 +110,7 @@ export default {
         </select>
 
         <button type="submit" class="form-button">
-          <p v-if="loading">Enviando dados</p>
+          <p v-if="loading">Enviando dados...</p>
           <p v-else>Cadastrar</p>
         </button>
       </form>
