@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       pets: null,
+      loading: true,
     }
   },
   methods: {
@@ -20,12 +21,14 @@ export default {
         .get('pets')
         .then(response => {
           if (response.status === 200) {
-            this.pets = response.data;
+            this.loading = false;
+            this.pets    = response.data;
           }
         })
     },
 
     deletePet(idPet) {
+      this.loading = true;
       api
         .delete(`pets/${idPet}`)
         .then(response => {
@@ -47,13 +50,15 @@ export default {
 
 <template>
   <div class="container">
-    <div class="card" v-for="(pet, index) in pets" :key="index">
+    <div v-if="loading" class="loading-pets"></div>
+
+    <div v-else class="card" v-for="(pet, index) in pets" :key="index">
       <div class="card-header border-primary">
         <p>{{pet.name}}</p> <p class="card-date">{{ pet.adoptionDate | convertDate }}</p>
         <div class="card-header-actions">
-          <a v-on:click="deletePet(pet._id)">
+          <router-link :to="`/edit/${pet._id}`" class="container-logo">
             <i class="fas fa-pencil-alt card-edit"></i>
-          </a>
+          </router-link>
           <a v-on:click="deletePet(pet._id)">
             <i class="far fa-trash-alt card-delete"></i>
           </a>

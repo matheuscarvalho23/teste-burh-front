@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 import Register from "../pages/Register.vue";
 import Pets from "../pages/Pets.vue";
+import Edit from "../pages/Edit.vue";
 
 Vue.use(Router);
 
@@ -24,6 +25,14 @@ const router = new Router({
       component: Pets,
       meta: {
         title: "The Pet's › Pets",
+      },
+    },
+    {
+      name: "Editar Pets",
+      path: '/edit/:id',
+      component: Edit,
+      meta: {
+        title: "The Pet's › Editar Pet",
       },
     },
   ]
