@@ -6,7 +6,7 @@ Para rodar o projeto digite: npm serve ou yarn serve;
 
 ### Importante
 
-busque o arquivo "api.js" em baseUrl no arquivo "src/service/api.js" e mude o link da API caso necessário com o link abaixo:
+Busque o arquivo "api.js" em baseUrl no arquivo "src/service/api.js" e mude o link da API caso necessário com o link abaixo:
 
 www.crudcrud.com
 
