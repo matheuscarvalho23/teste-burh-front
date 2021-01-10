@@ -55,12 +55,14 @@ export default {
               this.$noty.success('Pet registrado com sucesso !', {
                 layout: 'topRight',
               });
+
+              this.loading = false;
             } else {
               this.$noty.error('Ocorreu um erro ao realizar o cadastro!', {
                 layout: 'topRight',
               });
+              this.loading = false;
             }
-            this.loading = false;
           });
       }
     }
@@ -110,7 +112,7 @@ export default {
         </select>
 
         <button type="submit" class="form-button">
-          <p v-if="loading">Enviando dados...</p>
+          <i v-if="loading" class="fas fa-circle-notch fa-spin"></i>
           <p v-else>Cadastrar</p>
         </button>
       </form>

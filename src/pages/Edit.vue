@@ -47,21 +47,16 @@ export default {
           })
           .then(response => {
             if (response.status === 200) {
-              this.pet.name         = '';
-              this.pet.age          = '';
-              this.pet.adoptionDate = '';
-              this.pet.gender       = '';
-              this.$v.$reset();
-
               this.$noty.success('Pet editado com sucesso !', {
                 layout: 'topRight',
               });
+              this.loading = false;
             } else {
               this.$noty.error('Ocorreu um erro ao editar o pet!', {
                 layout: 'topRight',
               });
+              this.loading = false;
             }
-            this.loading = false;
           });
       }
     },
@@ -125,7 +120,7 @@ export default {
         </select>
 
         <button type="submit" class="form-button">
-          <p v-if="loading">Enviando dados...</p>
+          <i v-if="loading" class="fas fa-circle-notch fa-spin"></i>
           <p v-else>Editar</p>
         </button>
       </form>
