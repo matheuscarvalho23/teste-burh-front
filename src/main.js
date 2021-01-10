@@ -3,6 +3,8 @@ import App from './App.vue'
 import VueNoty from "vuejs-noty";
 import Vuelidate from "vuelidate";
 import VueRouter from "vue-router";
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 import router from "../src/routes/routes";
 
