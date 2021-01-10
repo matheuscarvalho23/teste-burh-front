@@ -1,6 +1,6 @@
 <script>
 import Header from './Header';
-import Register from './Register';
+import Register from '../pages/Register';
 
 export default {
   name: 'Layout',

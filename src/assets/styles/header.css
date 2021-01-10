@@ -16,8 +16,10 @@
   color: var(--primary);
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-.container-user {
-  color: var(--gray);
+.container-pets {
+  color: var(--primary);
+  text-decoration: none;
 }

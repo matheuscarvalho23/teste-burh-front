@@ -6,8 +6,12 @@ export default {
 
 <template>
   <div class="container">
-    <span class="container-logo">The Pet's</span>
-    <p class="container-user">Olá, Matheus</p>
+    <router-link :to="'/'" class="container-logo">
+      The Pet's
+    </router-link>
+    <router-link :to="'/pets'" class="container-pets">
+      Ver Pet's cadastrados
+    </router-link>
   </div>
 </template>
 

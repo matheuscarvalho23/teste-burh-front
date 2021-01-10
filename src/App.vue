@@ -1,17 +1,19 @@
 <script>
-import Layout from './components/Layout.vue'
+// import Layout from './components/Layout.vue';
+import Header from './components/Header';
 
 export default {
   name: 'App',
   components: {
-    Layout
+    Header,
   }
 }
 </script>
 
 <template>
   <div id="app">
-    <Layout />
+    <Header />
+    <RouterView />
   </div>
 </template>
 
