@@ -1,52 +1,22 @@
-# BURH: Teste prático para Frontend
+# Instruções
 
-Este será o teste usado para avaliar os candidatos a vaga de frontend Júnior/Pleno da [Burh](http://burh.com.br). Se você estiver participando de um processo seletivo para nossa equipe, certamente em algum momento receberá este link, mas caso você tenha chego aqui "por acaso", sinta-se convidado a desenvolver nosso teste e enviar uma mensagem para nós no e-mail `jorge@burh.com.br`. 
+Primeiramente rode o comando: npm -i ou yarn;
 
-## Instruções
+Para rodar o projeto digite: npm serve ou yarn serve;
 
-Você deverá criar um `fork` deste projeto, e desenvolver em cima do seu fork. Use o *README* principal do seu repositório para nos contar como foi resolver seu teste, as decisões tomadas, como você organizou e separou seu código, e <b>principalmente</b> as instruções de como rodar seu projeto e o <b>seu link do perfil do Burh</b>, sem ele não conseguiremos te encontrar para passar o feedback.
+### Importante
 
-Lembre-se que este é um teste técnico e não um concurso público, portanto, não existe apenas uma resposta correta. Mostre que você é bom e nos impressione, mas não esqueça do objetivo do projeto. 
+busque o arquivo "api.js" em baseUrl no arquivo "src/service/api.js" e mude o link da API caso necessário com o link abaixo:
 
-O desafio deverá ser concluído até o dia 11/01/2021 ao meio dia, só serão contabilizados commits até essa data.
+www.crudcrud.com
 
-## O desafio
+# Informações
 
-Você irá construir um crud sobre o que desejar, usando as [APIs do crducrud](https://crudcrud.com/) . O crud deverá ter campos dos tipos texto, numérico, data e booleano.
+Link do BURH: https://burh.com.br/conesnoopy23
 
-A interface fica por sua conta, use a criatividade, desenvolva algo bonito e usual.
+Realizar o desafio foi um aprendizado, foi uma liberdade para escolher o tema, e é muito prazerozo utilizar o VueJs, é simples e prático.
+No projeto foi utilizado algumas bibliotecas externas. Não tive muita disponibildade para focar 100% no projeto, porém em meus tempos livres procurei me dedicar ao máximo.
 
-### O que nós esperamos do seu teste
+A organização do projeto ficou no padrão MVC e com components Vue JS. Em todos os componentes utilizei o mesmo padrão de código, e declarando variáveis em inglês.
 
-* Ver na solução a utilização do framework VueJS.
-* Tambér ver a utilização de dependency managers (npm, webpack)
-* Um HTML escrito da maneira mais semântica possível (HTML5/5.1)
-* CSS3/4 - Com um pré processador de CSS (a escolha fica a seu critério, mas por aqui utilizamos SASS)
-* Mobile first e layout responsivo
-
-### O que nós ficaríamos felizes de ver em seu teste
-
-* Validação de campos e tratamento de erros
-
-### O que nos impressionaria
-
-* [BEM naming convention](http://getbem.com/naming/)
-* Aplicação de animações em css quando possível e tome cuidado com a performance da sua animação :)
-* Ver o código rodando live (Bucket estático S3, Heroku, Firebase Hosting ou qualquer outro host)
-
-### O que nós não gostaríamos
-
-* Descobrir que não foi você quem fez seu teste
-* Ver commits grandes, sem muita explicação nas mensagens em seu repositório 
-* Encontrar um commit com as dependências de NPM
-
-## O que avaliaremos em seu teste
-
-* Histórico de commits do git
-* As instruções de como rodar o projeto
-* Organização, semântica, estrutura, legibilidade, manutenibilidade do seu código
-* Alcance dos objetivos propostos
-* Adaptação mobile (layout responsivo)
-* Componentização e extensibilidade dos componentes
-
-Boa sorte!
+Como dito anteriormente, trabalhar com VueJs é simples, é possível ver o resultado sendo bem executado e com o mínimo de erros, espero ter atingido o obejtivo do desafio.
