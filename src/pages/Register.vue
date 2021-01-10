@@ -38,7 +38,7 @@ export default {
         return;
       } else {
         api
-          .post('register', {
+          .post('pets', {
             name: this.pet.name,
             age: this.pet.age,
             adoptionDate: this.pet.adoptionDate,
